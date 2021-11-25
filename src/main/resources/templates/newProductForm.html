@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>New Product Infinity</title>
+
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+<link rel="icon" type="image/png" href="assets/img/icons/infinity.svg"/>
+
+</head>
+<body>
+
+	<div class="container">
+		<br>
+		<h2>New Product</h2>
+		<form action="#" th:action="@{/addProduct}" th:object="${productoModel}" method="post">
+			<div class="form-group">
+				<label for="nombreProducto">Nombre Producto *</label> <input type="text"
+					class="form-control" id="nombreProducto" th:field="*{nombreProducto}" name="nombreProducto">
+			</div>
+			<div class="form-group">
+				<label for="marca">Marca *</label> <input type="text"
+					class="form-control" id="marca" th:field="*{marca}" name="marca">
+			</div>
+			<input type="hidden" th:field="*{id}" name="id" id="id">
+			<div class="form-group">
+				<label for="precio">Precio *</label> <input type="text"
+					class="form-control" id="precio" th:field="*{precio}"
+					name="precio">
+			</div>
+			<div class="form-group">
+				<label for="descripcion">Descripcion</label> <input type="text"
+					class="form-control" id="descripcion" th:field="*{descripcion}"
+					name="descripcion">
+			</div>
+			
+			<div class="form-group">
+				<label for="categoria">Categoria</label> <input type="text"
+					class="form-control" id="categoria" th:field="*{categoria}"
+					name="categoria">
+			</div>
+		
+			<div class="form-group">
+				<label for="urlImagenPrincipal">(URL) Imagen Producto</label> <input type="text"
+					class="form-control" id="urlImagenPrincipal" th:field="*{urlImagenPrincipal}"
+					name="urlImagenPrincipal">
+			</div>
+			<div class="form-group">
+				<label for="urlImagenUno">(URL) Detalle Imagen 1</label> <input type="text"
+					class="form-control" id="urlImagenUno" th:field="*{urlImagenUno}"
+					name="urlImagenUno">
+			</div>
+			<div class="form-group">
+				<label for="urlImagenDos">(URL) Detalle Imagen 2</label> <input type="text"
+					class="form-control" id="urlImagenDos" th:field="*{urlImagenDos}"
+					name="urlImagenDos">
+			</div>
+			<div class="form-group">
+				<label for="urlImagenTres">(URL) Detalle Imagen 3</label> <input type="text"
+					class="form-control" id="urlImagenTres" th:field="*{urlImagenTres}"
+					name="urlImagenTres">
+			</div>
+			<div class="form-group">
+				<label for="urlImagenCuatro">(URL) Detalle Imagen 4</label> <input type="text"
+					class="form-control" id="urlImagenCuatro" th:field="*{urlImagenCuatro}"
+					name="urlImagenCuatro">
+			</div>
+			<div class="form-group">
+				<label for="urlImagenCinco">(URL) Detalle Imagen 5</label> <input type="text"
+					class="form-control" id="urlImagenCinco" th:field="*{urlImagenCinco}"
+					name="urlImagenCinco">
+			</div>
+			<div class="form-group">
+				<label for="urlImagenSeis">(URL) Detalle Imagen 6</label> <input type="text"
+					class="form-control" id="urlImagenSeis" th:field="*{urlImagenSeis}"
+					name="urlImagenSeis">
+			</div>
+			<div class="form-group">
+				<label for="colorUno">Color 1</label> <input type="text"
+					class="form-control" id="colorUno" th:field="*{colorUno}"
+					name="colorUno">
+			</div>
+			<div class="form-group">
+				<label for="colorDos">Color 2</label> <input type="text"
+					class="form-control" id="colorDos" th:field="*{colorDos}"
+					name="colorDos">
+			</div>
+			<div class="form-group">
+				<label for="tallaUno">Talla 1</label> <input type="text"
+					class="form-control" id="tallaUno" th:field="*{tallaUno}"
+					name="tallaUno">
+			</div>
+			<div class="form-group">
+				<label for="tallaDos">Talla 2</label> <input type="text"
+					class="form-control" id="tallaDos" th:field="*{tallaDos}"
+					name="tallaDos">
+			</div>
+			<div class="form-group">
+				<label for="tallaTres">Talla 3</label> <input type="text"
+					class="form-control" id="tallaTres" th:field="*{tallaTres}"
+					name="tallaTres">
+			</div>
+			<br>
+			<button type="submit" class="btn btn-success">Save</button>
+		</form>
+</div>
+
+</body>
+</html>
